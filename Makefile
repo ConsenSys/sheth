@@ -1,5 +1,5 @@
 setup:
-	git clone https://github.com/ConsenSys/sheth.git
+	git clone https://github.com/ewasm/scout.git
 
 build:
 	cargo +nightly build --manifest-path=client/Cargo.toml --release
