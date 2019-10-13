@@ -1,12 +1,12 @@
 setup:
-	git clone git@github.com:ewasm/scout.git
+	git clone https://github.com/ConsenSys/sheth.git
 
 build:
-	cargo build --manifest-path=client/Cargo.toml --release
-	cargo build --manifest-path=scout/Cargo.toml --release
+	cargo +nightly build --manifest-path=client/Cargo.toml --release
+	cargo +nightly build --manifest-path=scout/Cargo.toml --release
 
 build-wasm:
-	cargo build --lib --release --no-default-features --features=scout --target wasm32-unknown-unknown
+	cargo +nightly build --lib --release --no-default-features --features=scout --target wasm32-unknown-unknown
 	chisel run --config chisel.toml
 
 scout: build build-wasm

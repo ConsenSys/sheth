@@ -13,7 +13,7 @@ provides mechanisms to move ether between a shard and the beacon chain.
 
 First, setup your environment:
 ```console
-rustup target install wasm32-unknown-unknown
+rustup target install wasm32-unknown-unknown --toolchain nightly
 cargo install chisel
 make setup
 ```
