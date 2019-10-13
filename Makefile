@@ -15,7 +15,7 @@ scout: build build-wasm
 	scout/target/release/phase2-scout scout/sheth.yaml
 
 test: build
-	cargo build --bin binsheth --release
+	cargo +nightly build --bin binsheth --release
 	client/target/release/client package 2 1 --height=256 > blob
 	-target/release/binsheth blob
 	rm blob
